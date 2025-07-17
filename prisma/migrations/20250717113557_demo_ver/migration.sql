@@ -17,10 +17,11 @@ CREATE TABLE "PointHistory" (
     "memberId" INTEGER NOT NULL,
     "amount" INTEGER NOT NULL,
     "type" "PointType" NOT NULL,
+    "reason" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "expiredAt" TIMESTAMP(3),
     "isExpired" BOOLEAN NOT NULL DEFAULT false,
-    "reason" TEXT,
+    "isDeleted" BOOLEAN NOT NULL DEFAULT false,
 
     CONSTRAINT "PointHistory_pkey" PRIMARY KEY ("id")
 );
